@@ -1,3 +1,4 @@
+/* Fuente y reset básico */
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -5,53 +6,53 @@ body {
     color: #333;
 }
 
-/* HERO */
+/* Hero con imagen de fondo */
 .hero {
-    background: url('images/panoramica.jpg') center/cover no-repeat;
+    background: url('images/portada.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
     position: relative;
 }
 .hero .overlay {
-    background-color: rgba(0, 64, 70, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 40px;
     border-radius: 10px;
-    color: white;
 }
 .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 20px;
 }
+
+/* Botón */
 .btn {
-    background-color: #d4af37; /* Dorado */
+    background-color: #ff9800;
     color: white;
-    padding: 12px 25px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.1rem;
 }
 .btn:hover {
-    background-color: #b18f2f;
+    background-color: #e68900;
 }
 
-/* DESTINOS */
+/* Sección de destinos */
 .destinos {
     padding: 50px 20px;
     text-align: center;
 }
 .destinos h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    color: #004046; /* Turquesa oscuro */
+    font-size: 2.5rem;
     margin-bottom: 30px;
 }
 .grid {
@@ -67,10 +68,6 @@ body {
     overflow: hidden;
     width: 300px;
     text-align: left;
-    transition: transform 0.2s ease;
-}
-.card:hover {
-    transform: scale(1.05);
 }
 .card img {
     width: 100%;
@@ -80,28 +77,27 @@ body {
 .card h3 {
     margin: 15px;
     font-family: 'Playfair Display', serif;
-    color: #004046;
 }
 .card p {
     margin: 0 15px 15px;
 }
 
-/* CONTACTO */
+/* Contacto */
 .contacto {
-    background-color: #004046;
+    background-color: #007B7F;
     color: white;
     padding: 40px 20px;
     text-align: center;
 }
 .contacto h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
-    background: #003236;
+    background: #00494D;
     color: white;
     text-align: center;
     padding: 15px;
