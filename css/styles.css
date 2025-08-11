@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007B7F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.destinos {
+    padding: 20px;
+    text-align: center;
+}
+
+.destinos .grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contacto {
+    background-color: #007B7F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #00494D;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
