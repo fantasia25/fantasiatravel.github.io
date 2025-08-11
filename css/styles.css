@@ -1,104 +1,128 @@
-/* Fuente y reset básico */
+/* styles.css (coloca este archivo en la raíz junto a index.html) */
+
+/* Reset / base */
+* { box-sizing: border-box; }
 body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #333;
+  background: #f8f9fa;
+  -webkit-font-smoothing:antialiased;
 }
 
-/* Hero con imagen de fondo */
-.hero {
-    background: url('images/portada.jpg') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-.hero .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    border-radius: 10px;
-}
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+/* HERO (fondo: asegúrate que la ruta existe exactamente) */
+header {
+  background-image: url('images/Fotos/Fotos_Encantada/Couple Sunbed.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1rem;
+  position: relative;
+  color: #fff;
+  text-align: center;
 }
 
-/* Botón */
-.btn {
-    background-color: #ff9800;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+/* capa oscura para mejorar lectura */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.25));
+  z-index: 0;
 }
-.btn:hover {
-    background-color: #e68900;
+header > * { position: relative; z-index: 1; }
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0 0 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+header p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto 1.25rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
 
-/* Sección de destinos */
-.destinos {
-    padding: 50px 20px;
-    text-align: center;
+/* Botón (si usas btn personalizado además de bootstrap) */
+.btn-custom {
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  padding: 0.7rem 1.1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
 }
+
+/* Secciones */
+section { padding: 4rem 1rem; }
+.destinos { background: #fff; }
 .destinos h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #0b4b4b;
 }
+
+/* Grid de tarjetas */
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
 }
 .card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: left;
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
 }
 .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 .card h3 {
-    margin: 15px;
-    font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  margin: 12px 16px 6px;
+  color: #00494D;
 }
-.card p {
-    margin: 0 15px 15px;
-}
+.card p { margin: 0 16px 16px; color: #666; }
 
-/* Contacto */
+/* Contacto y footer */
 .contacto {
-    background-color: #007B7F;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
+  background: #007B7F;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
 }
-.contacto h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
+.contacto h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.75rem; }
+footer {
+  background: #00494D;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* Footer */
-footer {
-    background: #00494D;
-    color: white;
-    text-align: center;
-    padding: 15px;
+/* Responsive */
+@media (max-width: 768px) {
+  header { padding: 4rem 1rem; min-height: 50vh; }
+  header h1 { font-size: 2.1rem; }
+  .card { width: 92%; max-width: 420px; }
 }
